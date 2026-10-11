@@ -1,0 +1,51 @@
+name: Build iOS IPA
+
+on:
+  workflow_dispatch: # Memungkinkan tombol "Run workflow" manual di GitHub
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build-ios:
+    name: Build iOS IPA
+    runs-on: macos-14 # Menggunakan runner macOS gratis dari GitHub Actions
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.0'
+          channel: 'stable'
+          cache: true
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Build iOS App Bundle (Unsigned)
+        run: |
+          flutter build ios --release --no-codesign
+
+      - name: Package App into .ipa
+        run: |
+          mkdir -p build/ios/iphoneos/Payload
+          cp -r build/ios/iphoneos/Runner.app build/ios/iphoneos/Payload/
+          cd build/ios/iphoneos
+          zip -r HaidilaoCam.ipa Payload
+          cd ../../..
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: HaidilaoCam-iOS-IPA
+          path: build/ios/iphoneos/HaidilaoCam.ipa

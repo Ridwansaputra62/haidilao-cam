@@ -1,0 +1,79 @@
+Widget _buildInteractiveHeaderBanner(bool isDark, {double previewWidth = 360.0}) {
+    final List<Color> bgColors = isDark
+        ? [const Color(0xFF7A141E), const Color(0xFF38070D)]
+        : [const Color(0xFFFFFFFF), const Color(0xFFF8F8FA)];
+
+    final Color titleColor = isDark ? Colors.white : const Color(0xFF1A1A1A);
+    final Color subtitleColor = isDark ? const Color(0xFFE2C474) : AppTheme.primaryRed;
+    final Color descriptionColor = isDark ? const Color(0xFFE0E0E6) : const Color(0xFF4A4A4A);
+    final Color accentLineColor = isDark ? const Color(0xFFE2C474) : AppTheme.primaryRed;
+
+    // Dynamic scale factor based on container width / 1080px export canvas width
+    final double scale = previewWidth / 1080.0;
+
+    return Container(
+      padding: EdgeInsets.only(
+        left: 40.0 * scale,
+        right: 20.0 * scale,
+        top: 32.0 * scale,
+        bottom: 12.0 * scale,
+      ),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: bgColors,
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+        border: Border(bottom: BorderSide(color: accentLineColor, width: 4.0 * scale)),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          // Left side: Header, Sub Header, Description (Strictly Left-aligned)
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // 1. Judul Utama (Header Title - Clickable Plain Text UPPERCASE)
+                GestureDetector(
+                  onTap: () => _showEditSingleTextDialog(
+                    title: 'JUDUL',
+                    controller: _titleController,
+                    fontSize: _titleFontSize,
+                    minFontSize: 30.0,
+                    maxFontSize: 140.0,
+                    onFontSizeChanged: (val) => setState(() => _titleFontSize = val),
+                  ),
+                  child: Text(
+                    _titleController.text.trim().isEmpty ? 'JUDUL' : _titleController.text.toUpperCase(),
+                    textAlign: TextAlign.left,
+                    style: GoogleFonts.outfit(
+                      color: titleColor,
+                      fontSize: _titleFontSize * scale,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 1.2 * scale,
+                    ),
+                  ),
+                ),
+                if (_showSubtitle) ...[
+                  const SizedBox(height: 4.0),
+                  // 2. Sub Judul (Sub Header - Clickable Plain Text UPPERCASE)
+                  GestureDetector(
+                    onTap: () => _showEditSingleTextDialog(
+                      title: 'SUB JUDUL',
+                      controller: _subtitleController,
+                      fontSize: _subtitleFontSize,
+                      minFontSize: 20.0,
+                      maxFontSize: 90.0,
+                      onFontSizeChanged: (val) => setState(() => _subtitleFontSize = val),
+                    ),
+                    child: Text(
+                      _subtitleController.text.trim().isEmpty ? 'SUB JUDUL' : _subtitleController.text.toUpperCase(),
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.outfit(
+                        color: subtitleColor,
+                        fontSize: _subtitleFontSize * scale,
+                        fontWeight: FontWeight.w900,
+
+
