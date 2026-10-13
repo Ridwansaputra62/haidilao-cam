@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kebijakan Privasi Resmi untuk aplikasi Store Audit Cam oleh Ridwan Saputra - Sesuai dengan Apple App Store Review Guideline 5.1.1.">
+  <title>Privacy Policy - Store Audit Cam | Ridwan Saputra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #10b981;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --badge-bg: #e0f2fe;
+      --badge-text: #0369a1;
+      --code-bg: #f1f5f9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 48px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      padding: 56px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      border: 1px solid var(--border);
+    }
+
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 32px;
+      margin-bottom: 36px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      border: 1px solid #bae6fd;
+    }
+
+    .badge.verified {
+      background: #ecfdf5;
+      color: #047857;
+      border-color: #a7f3d0;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: #0f172a;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    .meta-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .meta-item strong {
+      color: #1e293b;
+    }
+
+    .section-card {
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    p {
+      color: #334155;
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+
+    /* Permisson list styling */
+    .permission-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .permission-item {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 22px;
+      transition: border-color 0.2s ease;
+    }
+
+    .permission-item:hover {
+      border-color: #cbd5e1;
+    }
+
+    .permission-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .plist-key {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.8rem;
+      background: var(--code-bg);
+      color: #0369a1;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid #cbd5e1;
+    }
+
+    .permission-desc {
+      color: #475569;
+      font-size: 0.93rem;
+      margin-bottom: 0;
+    }
+
+    /* Highlight box */
+    .callout-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin: 20px 0;
+    }
+
+    .callout-box h3 {
+      font-size: 1.1rem;
+      color: #15803d;
+      margin-bottom: 8px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout-box p {
+      color: #166534;
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .no-tracking-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+    }
+
+    .no-tracking-box ul {
+      list-style-type: none;
+      margin-top: 10px;
+    }
+
+    .no-tracking-box li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 10px;
+      color: #334155;
+      font-size: 0.95rem;
+    }
+
+    .no-tracking-box li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #10b981;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: #f8fafc;
+      border: 2px dashed #cbd5e1;
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 36px;
+    }
+
+    .contact-card h2 {
+      border-left: none;
+      padding-left: 0;
+      margin-bottom: 16px;
+      font-size: 1.3rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .contact-box {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .contact-box span {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .contact-box a, .contact-box p {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      word-break: break-all;
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+      color: var(--primary-dark);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      margin-top: 48px;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    footer p + p {
+      margin-top: 6px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 20px 12px;
+      }
+      .container {
+        padding: 28px 20px;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge-wrap">
+        <span class="badge">App Store Review Guideline 5.1.1</span>
+        <span class="badge verified">Verified On-Device Privacy</span>
+      </div>
+      <h1>Kebijakan Privasi / Privacy Policy</h1>
+      <div class="meta-subtitle">
+        <span class="meta-item">Aplikasi: <strong>Store Audit Cam</strong></span>
+        <span>•</span>
+        <span class="meta-item">Pengembang: <strong>Ridwan Saputra</strong></span>
+        <span>•</span>
+        <span class="meta-item">Berlaku Sejak: <strong>Oktober 2026 / October 2026</strong></span>
+      </div>
+    </header>
+
+    <!-- 1. Identitas Aplikasi & Pengembang -->
+    <section class="section-card">
+      <h2>1. Identitas Aplikasi & Pengembang</h2>
+      <p>
+        Kebijakan Privasi ini mengatur penggunaan aplikasi seluler <strong>Store Audit Cam</strong> ("Aplikasi") yang dikembangkan dan dikelola secara independen oleh <strong>Ridwan Saputra</strong> ("Pengembang").
+      </p>
+      <p>
+        Dokumen ini dibuat untuk memberikan transparansi penuh kepada pengguna mengenai hak privasi dan bagaimana izin perangkat diproses secara aman sesuai dengan standar ketentuan Apple App Store Review Guidelines (Guideline 5.1.1).
+      </p>
+    </section>
+
+    <!-- 2. Data & Izin Perangkat yang Diakses -->
+    <section class="section-card">
+      <h2>2. Data & Izin Perangkat yang Diakses</h2>
+      <p>
+        Untuk menjalankan fungsinya sebagai sarana dokumentasi operasional toko, Aplikasi memerlukan beberapa izin fungsional perangkat berikut. Setiap izin digunakan secara spesifik hanya saat pengguna aktif menggunakan fitur terkait:
+      </p>
+
+      <div class="permission-grid">
+        <div class="permission-item">
+          <div class="permission-title">
+            📷 Kamera
+            <span class="plist-key">NSCameraUsageDescription</span>
+          </div>
+          <p class="permission-desc">
+            Digunakan murni untuk mengambil foto dan merekam video bukti audit kebersihan dan operasional toko secara langsung oleh pengguna.
+          </p>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-title">
+            🎤 Mikrofon
+            <span class="plist-key">NSMicrophoneUsageDescription</span>
+          </div>
+          <p class="permission-desc">
+            Digunakan hanya untuk merekam audio bersamaan saat pengguna merekam video bukti dokumentasi di dalam aplikasi.
+          </p>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-title">
+            📍 Lokasi / GPS
+            <span class="plist-key">NSLocationWhenInUseUsageDescription</span>
+          </div>
+          <p class="permission-desc">
+            Digunakan saat aplikasi aktif untuk mengambil koordinat lintang/bujur dan nama tempat guna disematkan sebagai teks <em>watermark</em> otomatis pada foto hasil jepretan sebagai validasi lokasi audit.
+          </p>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-title">
+            🖼️ Galeri Foto & Media
+            <span class="plist-key">NSPhotoLibraryUsageDescription &amp; NSPhotoLibraryAddUsageDescription</span>
+          </div>
+          <p class="permission-desc">
+            Digunakan untuk menyimpan foto/video hasil audit ke galeri perangkat pengguna, serta memilih foto dari galeri untuk fitur kolase dokumentasi atau logo kustom.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Cara Penyimpanan Data -->
+    <section class="section-card">
+      <h2>3. Cara Penyimpanan Data (Penyimpanan Lokal / Non-Cloud)</h2>
+      <div class="callout-box">
+        <h3>🔒 100% On-Device Storage (Pemrosesan Lokal)</h3>
+        <p>
+          <strong>Semua foto, video, dan koordinat lokasi disimpan secara lokal di perangkat pengguna.</strong> Aplikasi tidak mengunggah, mencadangkan, mentransmisikan, atau menyinkronkan foto/video audit ke server internal mana pun.
+        </p>
+      </div>
+      <p>
+        Seluruh proses penyematan stempel digital (watermarking) foto dan kompresi media dieksekusi langsung oleh prosesor perangkat Anda secara lokal (*offline-capable*).
+      </p>
+    </section>
+
+    <!-- 4. Tidak Ada Pelacakan Pihak Ketiga -->
+    <section class="section-card">
+      <h2>4. Tidak Ada Pelacakan Pihak Ketiga (No Tracking &amp; No Ads)</h2>
+      <div class="no-tracking-box">
+        <p>Kami menjunjung tinggi integritas data dan privasi pengguna dalam lingkungan kerja operasional:</p>
+        <ul>
+          <li><strong>Bebas Iklan & Pelacak:</strong> Aplikasi <strong>tidak menggunakan SDK pelacak iklan (ad tracker)</strong> pihak ketiga mana pun.</li>
+          <li><strong>Tanpa IDFA:</strong> Aplikasi tidak meminta atau mengakses Apple Advertising Identifier (IDFA).</li>
+          <li><strong>Tanpa Penjualan Data:</strong> Kami tidak pernah menjual, menyewakan, atau membagikan data identitas/lokasi pengguna ke pialang data (*data brokers*) atau entitas komersial luar.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. Privasi Anak-Anak -->
+    <section class="section-card">
+      <h2>5. Privasi Anak-Anak (Children’s Privacy)</h2>
+      <p>
+        Aplikasi <strong>Store Audit Cam</strong> dirancang secara khusus untuk keperluan pekerjaan operasional dan audit ritel profesional. Aplikasi tidak ditujukan untuk anak-anak di bawah umur 13/17 tahun dan tidak secara sengaja mengumpulkan informasi data pribadi dari anak-anak.
+      </p>
+    </section>
+
+    <!-- 6. Hak Pengguna -->
+    <section class="section-card">
+      <h2>6. Hak Pengguna (User Control &amp; Data Rights)</h2>
+      <p>
+        Pengguna memiliki kendali penuh atas izin perangkat dan file dokumentasi mereka:
+      </p>
+      <ul style="margin-left: 22px; margin-bottom: 14px; color: #334155;">
+        <li style="margin-bottom: 8px;">
+          <strong>Pengaturan Izin Kapan Saja:</strong> Anda dapat mencabut atau mengaktifkan kembali izin Kamera, Mikrofon, atau Lokasi kapan pun melalui menu <strong>Pengaturan iOS (Settings &gt; Privacy &amp; Security)</strong>.
+        </li>
+        <li style="margin-bottom: 8px;">
+          <strong>Penghapusan File Mandiri:</strong> Seluruh foto dan video hasil audit dapat dihapus secara permanen kapan saja langsung dari aplikasi Galeri Foto bawaan perangkat Anda.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 7. Kontak Pengembang -->
+    <div class="contact-card">
+      <h2>7. Kontak Pengembang &amp; Dukungan (Support Contact)</h2>
+      <p>
+        Jika Anda memiliki pertanyaan, saran, atau memerlukan bantuan teknis terkait kebijakan privasi dan penggunaan aplikasi <strong>Store Audit Cam</strong>, silakan hubungi saluran resmi berikut:
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-box">
+          <span>Nama Pengembang</span>
+          <p style="color: #0f172a;">Ridwan Saputra</p>
+        </div>
+
+        <div class="contact-box">
+          <span>Email Pengembang</span>
+          <a href="mailto:ridwansaputra331@gmail.com">ridwansaputra331@gmail.com</a>
+        </div>
+
+        <div class="contact-box">
+          <span>Website Portofolio</span>
+          <a href="https://portofolio-ridwan.netlify.app/" target="_blank" rel="noopener">portofolio-ridwan.netlify.app</a>
+        </div>
+
+        <div class="contact-box">
+          <span>GitHub Repository</span>
+          <a href="https://github.com/ridwansaputra62/haidilao-cam" target="_blank" rel="noopener">github.com/ridwansaputra62</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 <strong>Store Audit Cam</strong> by <strong>Ridwan Saputra</strong>. All rights reserved.</p>
+      <p>Compliant with Apple App Store Review Guidelines &amp; iOS Security Standards.</p>
+    </footer>
+  </div>
+</body>
+</html>
