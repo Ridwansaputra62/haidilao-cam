@@ -35,9 +35,12 @@ class LocationService {
 
       LocationPermission permission = await Geolocator.checkPermission();
       if (permission == LocationPermission.denied) {
-        permission = await Geolocator.requestPermission();
+        // Pada simulator/development, tangani dengan gracefully atau fallback
+        try {
+          permission = await Geolocator.requestPermission();
+        } catch (_) {}
         if (permission == LocationPermission.denied) {
-          return _getFallbackLocation('Izin Lokasi Ditolak');
+          return _getFallbackLocation('Haidilao Store Area');
         }
       }
 
